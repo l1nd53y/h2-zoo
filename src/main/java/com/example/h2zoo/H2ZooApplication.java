@@ -23,7 +23,8 @@ public class H2ZooApplication {
 		ReptileRepository reptileRepository = configurableApplicationContext.getBean(ReptileRepository.class);
 		Reptile kingCobra = new Reptile("Slither", "Snake", "Black & Yellow", "Carnivore");
 		Reptile komodoDragon = new Reptile("Dennis", "Lizard", "Brown", "Carnivore");
-		reptileRepository.saveAll(List.of(kingCobra, komodoDragon));
+		Reptile storePet = new Reptile("Spyro", "Leopard Gecko", "Green/Yellow/Brown", "Superworms");
+		reptileRepository.saveAll(List.of(kingCobra, komodoDragon, storePet));
 
 		DogRepository dogRepository = configurableApplicationContext.getBean(DogRepository.class);
 		Dog miniSchnauzer = new Dog("Neville", "Miniature Schnauzer", "Grey", "Marshmallows");
